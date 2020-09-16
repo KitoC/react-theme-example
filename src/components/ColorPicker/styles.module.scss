@@ -1,0 +1,10 @@
+.base {
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--padding-m);
+
+  span {
+    margin-right: var(--margin-s);
+    color: var(--color-text);
+  }
+}

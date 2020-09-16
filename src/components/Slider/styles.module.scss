@@ -1,0 +1,31 @@
+.base {
+  display: flex;
+  align-items: center;
+  padding-bottom: var(--padding-m);
+
+  span {
+    margin-right: var(--margin-s);
+    color: var(--color-text);
+  }
+
+  & input {
+    width: 55px;
+    height: 20px;
+    -webkit-appearance: none;
+    background: #d3d3d3;
+    height: 25px;
+    border-radius: 20px;
+    padding: var(--padding-xs);
+
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  }
+}

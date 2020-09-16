@@ -1,0 +1,50 @@
+:root {
+  /* Paddings/Margins */
+  $sizes: (
+    "xs": 0.3rem,
+    "s": 0.6rem,
+    "m": 1rem,
+    "l": 1.4rem,
+    "xl": 2rem,
+  );
+
+  @each $key, $size in $sizes {
+    --padding-#{$key}: #{$size};
+    --margin-#{$key}: #{$size};
+  }
+
+  /* Borders */
+  $border-radii: (
+    "xxs": 0.15em,
+    "xs": 0.2em,
+    "s": 1em,
+    "m": 1.667em,
+    "rounded": 50%,
+  );
+
+  @each $key, $border-radius in $border-radii {
+    --border-radius-#{$key}: #{$border-radius};
+  }
+
+  /* Colors */
+  $colors: (
+    "basic-black": #444444,
+    "basic-white": #ffffff,
+    "primary": #2d61c2,
+    "secondary": #dad9d9,
+  );
+
+  $opacities: (
+    "2": 0.2,
+    "5": 0.5,
+    "8": 0.8,
+  );
+
+  @each $key, $color in $colors {
+    --color-#{$key}: #{$color};
+
+    @each $opacity-key, $opacity in $opacities {
+      --color-#{$key}-opacity-#{$opacity-key}: #{rgba($color, $opacity)};
+    }
+  }
+}
